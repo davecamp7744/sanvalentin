@@ -1,0 +1,154 @@
+/* Fuente romántica */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?tulips,flowers') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+/* Contenedor con fondo transparente */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Título con animación */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff4081;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Botones */
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:first-child {
+    background: #ff4081;
+    color: white;
+}
+
+button:last-child {
+    background: #607d8b;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de pétalos cayendo */
+@keyframes petalsFall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.petal {
+    position: absolute;
+    width: 15px;
+    height: 18px;
+    background: pink;
+    border-radius: 50% 70% 70% 50%;
+    opacity: 0.8;
+    animation: petalsFall linear infinite;
+}
+/* 🎊 Fondo especial para la celebración */
+.celebration {
+    background: url('https://source.unsplash.com/1600x900/?romantic,flowers') no-repeat center center/cover;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* ✨ Contenedor con scroll */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+    width: 90%;
+    max-width: 800px;
+    height: 80vh; /* Establecemos un alto fijo para habilitar el scroll */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    margin: 0 auto;
+    text-align: left; /* Para que el texto esté alineado a la izquierda */
+    position: relative;
+}
+
+/* 💖 Título con animación */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff4081;
+}
+
+.love-message {
+    font-size: 1.5rem;
+    color: #d500f9;
+}
+
+.special-text {
+    font-size: 1.2rem;
+    color: #880e4f;
+    font-style: italic;
+}
+
+/* 🎊 Botón */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4081;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #c51162;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎉 Confeti */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
